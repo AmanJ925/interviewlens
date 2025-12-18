@@ -1,5 +1,3 @@
-const fetch = require('node-fetch');
-
 /**
  * Analyzes a resume against a job description using OpenAI's Chat API.
  * @param {string} resume - Candidate's resume text
@@ -63,4 +61,6 @@ async function analyzeResume(resume, jobDescription) {
 }
 
 module.exports = analyzeResume;
+
+
 
