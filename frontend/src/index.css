@@ -3,19 +3,42 @@
 @tailwind utilities;
 
 :root {
+  /* Typography */
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Color variables */
+  --color-bg-start: #0a1027;      /* Dark blue */
+  --color-bg-end: #20232b;        /* Charcoal */
+  --color-blue-accent: #3b82f6;   /* Blue-500 */
+  --color-purple-accent: #a78bfa; /* Purple-400 */
+  --color-radial-glow: rgba(80, 125, 255, 0.18);
+  --color-noise: url('https://www.transparenttextures.com/patterns/noise.png');
+
+  /* Color scheme */
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.92);
+  background: linear-gradient(135deg, var(--color-bg-start) 0%, var(--color-bg-end) 100%);
+  position: relative;
 }
+
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.28;
+  background: radial-gradient(circle at 60% 40%, var(--color-radial-glow) 0, transparent 60%), var(--color-noise);
+  mix-blend-mode: lighten;
+}
+body { position: relative; z-index: 1; }
+
 
 a {
   font-weight: 500;

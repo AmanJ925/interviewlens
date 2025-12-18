@@ -16,6 +16,6 @@ COPY . .
 # Expose backend server port
 EXPOSE 5000
 
-# Start the server
-CMD ["npm", "run", "dev"]
+# Start the server (production)
+CMD ["node", "src/server.js"]
 
