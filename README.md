@@ -1,32 +1,67 @@
-# InterviewLens AI
+# InterviewLens AI 🚀
 
-InterviewLens AI is an advanced platform that leverages artificial intelligence to analyze resumes and provide insightful feedback for job seekers and recruiters. It streamlines the resume review process, offering actionable suggestions and comprehensive scoring to help users improve their chances in the job market.
+InterviewLens AI is a full-stack, AI-powered resume analysis platform that evaluates how well a candidate’s resume aligns with a specific job description. It provides a match score, highlights strengths and missing skills, and suggests targeted improvements to help candidates prepare better for interviews.
 
-## Features
+This project is designed with a production-ready architecture, featuring a modern frontend, a RESTful backend API, and fully containerized deployment using Docker.
 
-- **AI-Powered Resume Analysis**: Receive detailed feedback and analytics on your resume content and structure.
-- **Actionable Improvements**: Tailored suggestions for enhancing resume effectiveness.
-- **Real-Time Processing**: Fast, efficient, and scalable resume evaluation.
-- **Modern User Interface**: Easy-to-use, responsive frontend built with React and Tailwind CSS.
-- **RESTful API**: Robust backend for handling analysis requests and integrations.
-- **Containerized Deployment**: Effortless setup and scalability using Docker.
+---
 
-## Tech Stack
+## ✨ Key Features
 
-- **Frontend:**
-  - React
-  - Vite
-  - Tailwind CSS
+- **Resume ↔ Job Description Matching**
+  - Calculates a match score based on skill alignment
+- **Strengths Identification**
+  - Highlights skills already aligned with the role
+- **Missing Skills Detection**
+  - Identifies gaps between resume and job requirements
+- **Interview Focus Areas**
+  - Suggests key topics candidates should prepare for interviews
+- **Resume Improvement Suggestions**
+  - Actionable tips to improve resume quality
+- **Modern UI/UX**
+  - Clean, responsive, and intuitive interface built with React & Tailwind CSS
+- **RESTful API**
+  - Backend API for scalable resume analysis
+- **Dockerized Deployment**
+  - One-command setup using Docker Compose
 
-- **Backend:**
-  - Node.js
-  - Express.js
+---
 
-- **AI/ML:**
-  - Custom resume analysis logic (Node.js)
+## 🧠 Tech Stack
 
-- **DevOps:**
-  - Docker
+### Frontend
+- React
+- Vite
+- Tailwind CSS
+- Nginx (production container)
+
+### Backend
+- Node.js
+- Express.js
+- Custom AI-driven resume analysis logic
+
+### DevOps
+- Docker
+- Docker Compose
+
+---
+
+## 📂 Project Structure
+
+```text
+interviewlens-ai/
+├── frontend/        # React + Tailwind frontend
+│   ├── src/
+│   ├── public/
+│   ├── Dockerfile
+│
+├── backend/         # Node.js + Express API
+│   ├── src/
+│   ├── Dockerfile
+│
+├── docker-compose.yml
+└── README.md
+```
 
 ## Getting Started
 
@@ -110,9 +145,4 @@ docker-compose up --build
 ```
 
 ---
-
-## Contribution
-Contributions and suggestions are welcome! Please open an issue or submit a pull request.
-
-## License
-MIT
+Thank You.
