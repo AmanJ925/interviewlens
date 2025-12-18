@@ -12,13 +12,9 @@ app.get('/', (req, res) => {
   res.status(200).json({ status: 'ok' });
 });
 
-// Mount analyze route if exists
-try {
-  const analyzeRouter = require('./routes/analyze');
-  app.use('/api/analyze', analyzeRouter);
-} catch (e) {
-  // If the route file is empty or does not export, skip mounting
-}
+// Mount analyze route
+const analyzeRoute = require('./routes/analyze');
+app.use('/api/analyze', analyzeRoute);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
